@@ -1,0 +1,47 @@
+1..Min Max
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    internal class MinandMax
+    {
+        int n;
+        int[] arr;
+     
+        public void GetDetails()
+        {
+            Console.WriteLine("Enter the range:");
+            n = Convert.ToInt32(Console.ReadLine());
+            arr = new int[n];
+            for (int i=0;i<n;i++)
+            {
+                Console.WriteLine($"Enter the {i} no:");
+                arr[i]= Convert.ToInt32(Console.ReadLine());
+
+
+            }
+        }
+         public void Getdisplay()
+        {
+            int m, s;
+            m = arr.Max();
+            s = arr.Min();
+            Console.WriteLine($"Max from array:{m}");
+            Console.WriteLine($"Min from array:{s}");
+
+        }
+    }
+}
+
+// See https://aka.ms/new-console-template for more information
+using ConsoleApp5;
+using System.Threading.Tasks.Dataflow;
+
+Console.WriteLine("Hello, World!");
+MinandMax obj= new MinandMax();
+obj.GetDetails();
+obj.Getdisplay();
