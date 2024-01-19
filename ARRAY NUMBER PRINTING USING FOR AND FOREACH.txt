@@ -1,0 +1,59 @@
+ARRAY NUMBER PRINTING USING FOR AND FOREACH:
+
+
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp8
+{
+        internal class Demo6
+        {
+            int[] num = new int[5];
+
+            public void GetDetails()
+            {
+                for (int i = 0; i < num.Length; i++)
+                {
+                    Console.WriteLine("Enter a number");
+                    num[i] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+
+            public void DisplayDetails()
+            {
+                for (int i = 0; i < num.Length; i++)
+                {
+                    Console.WriteLine($"num[{i}] = {num[i]}");
+                }
+            }
+
+            public void DisplayDetails2()
+            {
+                foreach (var a in num)
+                {
+                    Console.WriteLine($"{a}");
+                }
+            }
+        }
+    }
+using ConsoleApp8;
+
+class Hello
+{
+    public static void Main()
+    {
+        Demo6 demo=new Demo6();
+        demo.GetDetails();
+        demo.DisplayDetails();
+        demo.DisplayDetails2();
+    }
+}
